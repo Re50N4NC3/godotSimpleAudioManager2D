@@ -2,5 +2,6 @@
 
 [ext_resource type="Script" path="res://audio_manager/audio_manager.gd" id="1_mo5x7"]
 
-[node name="audio_manager" type="Node"]
+[node name="AudioManager" type="Node"]
 script = ExtResource("1_mo5x7")
+sounds_list = Array[Resource("res://audio_manager/component_sound.gd")]([null])

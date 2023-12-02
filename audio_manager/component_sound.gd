@@ -1,11 +1,13 @@
-extends Node
+extends Node2D
 class_name ComponentSound
 
-@export var stream_effect: AudioStreamPlayer2D
-@export var sound: AudioStreamMP3
+var stream_effect: AudioStreamPlayer2D
+@export var sound_name: String
+@export var sound_file: AudioStreamMP3
 
 func _ready():
-	stream_effect.stream = sound
+	stream_effect = get_node("AudioPlayer")
+	stream_effect.stream = sound_file
 	stream_effect.play()
 	stream_effect.finished.connect(remove_stream)
 	
