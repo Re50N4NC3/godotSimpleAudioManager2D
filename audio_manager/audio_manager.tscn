@@ -11,7 +11,7 @@ volume_change_max = 0.0
 pitch_scale_min = 1.0
 pitch_scale_max = 1.0
 max_distance = 2000
-area_mask = 0
+area_mask = 1
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_mo5x7")

@@ -2,7 +2,11 @@ extends Node
 
 var sound_component: PackedScene = load("res://audio_manager/component_sound.gd")
 @export var sounds_list: Array[ComponentSoundResource] = []
+var sounds_names: Array[String] = []
 
+func _ready():
+	for snd_no in range(0, sounds_list.size()):
+		sounds_names[snd_no] = sounds_list[snd_no].sound_name
 
 func play_sound(sound_name: String, position: Vector2):
 	var sound_to_play: AudioStreamMP3 = find_sound_resource(sound_name)
@@ -16,7 +20,6 @@ func play_sound(sound_name: String, position: Vector2):
 		print("Couldn't find sound with name " + sound_name + " in Sounds List")
 
 func find_sound_resource(sound_name: String) -> AudioStreamMP3:
-	for snd in sounds_list:
-		if snd.sound_name == sound_name:
-			return snd.sound_file
+	if sound_name in sounds_names:
+		return sounds_list[sounds_names.find(sound_name, 0)].sound_file
 	return null
