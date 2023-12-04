@@ -17,7 +17,9 @@ func play_sound(sound_name: String, position: Vector2):
 		
 		snd.global_position = position
 		snd.sound_file = sound_to_play
-		_setup_sound_values(snd, sound_position_in_array)
+		_setup_other_sound_values(snd, sound_position_in_array)
+		
+		snd.add_to_group("sounds")
 		
 		get_parent().add_child.call_deferred(snd)
 	else:
@@ -29,7 +31,7 @@ func _find_sound_resource_position(sound_name: String) -> int:
 		return sound_position_in_array
 	return -1
 	
-func _setup_sound_values(snd: ComponentSoundPlayer, sound_position_in_array: int) -> void:
+func _setup_other_sound_values(snd: ComponentSoundPlayer, sound_position_in_array: int) -> void:
 	snd.volume_change_range = Vector2(sounds_resource_list[sound_position_in_array].volume_change_min, 
 									  sounds_resource_list[sound_position_in_array].volume_change_max)
 	snd.pitch_change_range = Vector2(sounds_resource_list[sound_position_in_array].pitch_scale_min, 
