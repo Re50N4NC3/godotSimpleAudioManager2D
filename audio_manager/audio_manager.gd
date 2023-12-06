@@ -8,7 +8,7 @@ func _ready():
 	for snd_no in range(0, sounds_resource_list.size()):
 		sounds_names.append(sounds_resource_list[snd_no].sound_name)
 
-func play_sound(sound_name: String, position: Vector2):
+func play_sound(sound_name: String, position: Vector2) -> void:
 	var sound_position_in_array = _find_sound_resource_position(sound_name)
 	
 	if sound_position_in_array != -1:
@@ -39,11 +39,13 @@ func _setup_other_sound_values(snd: ComponentSoundPlayer, sound_position_in_arra
 	snd.max_distance = sounds_resource_list[sound_position_in_array].max_distance
 	snd.area_mask = sounds_resource_list[sound_position_in_array].area_mask
 
-func stop_all_sounds():
-	pass
+func stop_all_sounds() -> void:
+	for sound in get_tree().get_nodes_in_group("sounds"):
+		sound.audio_player.stream_paused = true
 
-func resume_all_sounds():
-	pass
+func resume_all_sounds() -> void:
+	for sound in get_tree().get_nodes_in_group("sounds"):
+		sound.audio_player.stream_paused = false
 	
-func remove_all_sounds():
+func remove_all_sounds() -> void:
 	pass

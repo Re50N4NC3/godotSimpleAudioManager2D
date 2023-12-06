@@ -19,4 +19,5 @@ func _ready():
 	audio_player.finished.connect(remove_stream)
 	
 func remove_stream():
+	remove_from_group("sounds")
 	queue_free()

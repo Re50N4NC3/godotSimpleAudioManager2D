@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxmnbbtpmq14j"]
+[gd_scene load_steps=7 format=3 uid="uid://cxmnbbtpmq14j"]
 
 [ext_resource type="Script" path="res://audio_manager/audio_manager.gd" id="1_mo5x7"]
 [ext_resource type="Script" path="res://audio_manager/component_sound_resource.gd" id="2_gja0l"]
 [ext_resource type="AudioStream" uid="uid://birv7mypskepd" path="res://test/test_click.mp3" id="3_r4216"]
+[ext_resource type="AudioStream" uid="uid://ckasa68vnmepb" path="res://test/test_effect.mp3" id="4_hr60i"]
 
 [sub_resource type="Resource" id="Resource_sas55"]
 script = ExtResource("2_gja0l")
@@ -15,6 +16,17 @@ pitch_scale_max = 1.0
 max_distance = 2000
 area_mask = 1
 
+[sub_resource type="Resource" id="Resource_cjm2x"]
+script = ExtResource("2_gja0l")
+sound_name = "test_effect"
+sound_file = ExtResource("4_hr60i")
+volume_change_min = -7.428
+volume_change_max = 4.457
+pitch_scale_min = 0.81
+pitch_scale_max = 2.181
+max_distance = 2000
+area_mask = 1
+
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_mo5x7")
-sounds_resource_list = Array[ExtResource("2_gja0l")]([SubResource("Resource_sas55")])
+sounds_resource_list = Array[ExtResource("2_gja0l")]([SubResource("Resource_sas55"), SubResource("Resource_cjm2x")])
