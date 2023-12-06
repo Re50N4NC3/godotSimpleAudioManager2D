@@ -17,3 +17,7 @@ func _input(event):
 			if paused_sounds: AudioManager.resume_all_sounds()
 			else: AudioManager.stop_all_sounds()
 			paused_sounds = !paused_sounds
+			
+		## removing all sounds in play
+		if event.pressed and event.keycode == KEY_A:
+			AudioManager.remove_all_sounds()

@@ -48,4 +48,5 @@ func resume_all_sounds() -> void:
 		sound.audio_player.stream_paused = false
 	
 func remove_all_sounds() -> void:
-	pass
+	for sound in get_tree().get_nodes_in_group("sounds"):
+		sound.queue_free()
