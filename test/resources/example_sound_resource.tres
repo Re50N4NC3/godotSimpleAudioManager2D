@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ComponentSoundResource" load_steps=3 format=3 uid="uid://cjqcanm0pbs54"]
+
+[ext_resource type="Script" path="res://audio_manager/component_sound_resource.gd" id="1_1suk0"]
+[ext_resource type="AudioStream" uid="uid://w8lcnmvut7st" path="res://test/sounds/test_splash.mp3" id="2_svnd7"]
+
+[resource]
+script = ExtResource("1_1suk0")
+sound_name = "test_example_resource"
+sound_file = ExtResource("2_svnd7")
+volume_change_min = 0.0
+volume_change_max = 0.0
+pitch_scale_min = 0.248
+pitch_scale_max = 1.0
+max_distance = 2000
+area_mask = 1

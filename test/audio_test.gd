@@ -11,6 +11,9 @@ func _input(event):
 		# sound with variable pitch and volume
 		if event.pressed and event.keycode == KEY_W:
 			AudioManager.play_sound("test_effect", global_position)
+		# sound with variable pitch created from resource
+		if event.pressed and event.keycode == KEY_E:
+			AudioManager.play_sound("test_example_resource", global_position)
 			
 		## stopping and resuming sounds
 		if event.pressed and event.keycode == KEY_P:

@@ -13,7 +13,6 @@ config_version=5
 config/name="godotSimpleAudioManager"
 run/main_scene="res://test/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
