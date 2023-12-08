@@ -11,7 +11,8 @@
 #### Creating sound resource
 
 ### Methods
-
+- 'play_sound(sound_name: String, position: Vector2) -> void' 
+- 'resume_all_sounds()' 
 ### Todo
 - Between scene persistence
 - Music player
