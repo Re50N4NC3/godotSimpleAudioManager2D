@@ -7,8 +7,15 @@
 
 ### Setup
 #### Creating Audio Manager
+0. Clone this repo or download as a zip
+0. Copy directory `audio_manager` to your project
+0. [Create singleton (autoload)](https://docs.godotengine.org/en/stable/tutorials/scripting/singletons_autoload.html#autoload) using `audio_manager.tscn` 
+0. Call manager functions inside your scenes (check example code in `/test/audio_test.gd`)
 
 #### Creating sound resource
+##### Directly in list
+
+##### As a Godot resource
 
 ### Methods
 #### `play_sound(sound_name: String, position: Vector2) -> void` 
