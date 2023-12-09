@@ -23,7 +23,7 @@
 - `Area Mask` - Integer, determines `area_mask` layer, for better explanation check [documentation](https://docs.godotengine.org/en/stable/classes/class_audiostreamplayer2d.html#class-audiostreamplayer2d-property-area-mask)
 
 ##### Directly in list
-0. Go to `audio_manager/audio_manager.tscn` and `AudioManager` Node inside the scene
+0. Go to [audio_manager/audio_manager.tscn](audio_manager/audio_manager.tscn) and `AudioManager` Node inside the scene
 0. In inspector under `Sound Resource List` tab click `+Add Element`
 0. Click on `<empty>` and pick `New ComponentSoundResource` from the dropdown
 0. Click on newly created `ComponentSoundResource` to edit it's values, changes to at least `SoundName` and `SoundFile` are necessary.
@@ -34,16 +34,19 @@
 0. Select save location
 0. Select created resource in `FileSystem`
 0. In `Inspector` tab edit desired values, changes to at least `SoundName` and `SoundFile` are necessary
-0. Go to `audio_manager/audio_manager.tscn` and `AudioManager` Node inside the scene
+0. Go to [audio_manager/audio_manager.tscn](audio_manager/audio_manager.tscn) and `AudioManager` Node inside the scene
 0. In inspector under `Sound Resource List` tab click `+Add Element`
 0. Click on `<empty>` and pick `QuickLoad` or `Load` from the dropdown
 0. Select created Resource.
+
+Example resource: [test\resources\example_sound_resource.tres](test\resources\example_sound_resource.tres)
 
 Remember, resource file name is not used in function call but rather name that you put in `SoundName` variable.
 
 This is recommended way, sounds created as resource are more easily reused between projects and more "safe" as for example small changes related to list code won't remove all created sounds.
 
 ### Methods
+All methods are inside [audio_manager/audio_manager.tscn](audio_manager/audio_manager.tscn).
 #### `play_sound(sound_name: String, position: Vector2) -> void` 
 Finds a sound with name `sound_name` and plays it from 2D `position`. If sound is not found debug message is displayed in console but no error is thrown. 
 
