@@ -51,7 +51,7 @@ All methods are inside [audio_manager/audio_manager.tscn](audio_manager/audio_ma
 Finds a sound with name `sound_name` and plays it from 2D `position`. If sound is not found debug message is displayed in console but no error is thrown. 
 
 #### `stop_all_sounds() -> void` 
-Stops all sounds that are currently playing, new sounds are not stopped.
+Stops all sounds that are currently playing, new sounds played after this method call are not stopped.
 
 #### `resume_all_sounds() -> void` 
 Resumes all sounds.
